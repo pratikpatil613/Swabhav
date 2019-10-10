@@ -1,12 +1,12 @@
-Command for git hub
-1.git init
-2.git log 
-3.git status
-4.git add .
-5.git commit -m 'String'
-6.git checkout hashcode
-7.git checkout master
-8.git remote -v
-9.git remite add REOISITIRY NAME lINK
-10.git remote -v
-11.git push Repository Name Master
+Commands for git hub
+1.git int    (converts folder to repository or .git forlder handle) 
+2.git log    (to view commit)
+3.git status (show state of working directory)
+4.git add .  (ready to commit )
+5.git commit -m 'String' (to commit)
+6.git checkout hashcode  (move to change using hash code)
+7.git checkout master    (move to current master)
+8.git remote -v          (to check registraion)
+9.git remite add REOISITIRY NAME lINK(for registration) 
+10.git remote -v (to check registration)
+11.git push Repository Name Master (to push on git hub)
