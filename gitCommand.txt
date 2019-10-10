@@ -1,0 +1,12 @@
+Command for git hub
+1.git init
+2.git log 
+3.git status
+4.git add .
+5.git commit -m 'String'
+6.git checkout hashcode
+7.git checkout master
+8.git remote -v
+9.git remite add REOISITIRY NAME lINK
+10.git remote -v
+11.git push Repository Name Master
