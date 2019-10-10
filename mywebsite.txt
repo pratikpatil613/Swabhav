@@ -1,1 +1,1 @@
-day1 : hello 
+day 2: how are u
