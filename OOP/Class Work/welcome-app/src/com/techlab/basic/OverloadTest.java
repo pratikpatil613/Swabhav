@@ -11,10 +11,9 @@ public class OverloadTest {
 
 		printInfo("pratik");
 		printInfo(10);
-		printinfo(1 < 2);
-		printinfo('p');
-		printinfo(30);
-		printInfo(10.5f);
+		printInfo(1 < 2);
+		printInfo(30.00);
+		printInfo(20.01f);
 
 	}
 
@@ -29,18 +28,18 @@ public class OverloadTest {
 		System.out.println(content);
 	}
 
-	static void printinfo(boolean val) {
+	static void printInfo(boolean val) {
 		System.out.println("overload boolean");
 		System.out.println(val);
 
 	}
 
-	static void printinfo(char character) {
+	static void printInfo(char character) {
 		System.out.println("overload character");
 		System.out.println(character);
 	}
 
-	static void printinfo(double num) {
+	static void printInfo(double num) {
 		System.out.println("overload double");
 		System.out.println(num);
 	}
@@ -48,5 +47,7 @@ public class OverloadTest {
 	static void printInfo(float value1) {
 		System.out.println("overload float");
 		System.out.println(value1);
+
 	}
+
 }
