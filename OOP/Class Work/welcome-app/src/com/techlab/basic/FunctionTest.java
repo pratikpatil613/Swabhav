@@ -2,7 +2,9 @@ package com.techlab.basic;
 
 public class FunctionTest {
 	public static void main(String args[]) {
-		boolean r1 = checkEven1(10);
+		
+		int n=20;
+		boolean r1 = checkEven1(n);
 		System.out.println(r1);
 
 		boolean r2 = checkEven2(10);
@@ -39,7 +41,7 @@ public class FunctionTest {
 
 	private static int squareEvenNo2(int n2) {
 		if (checkEven2(n2)) {
-			return n2 * n2;
+			System.out.println(n2*n2);
 		}
 		return -1;
 	}
