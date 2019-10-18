@@ -3,6 +3,7 @@ package com.techlabs.rectangle;
 public class Rectangle {
 	private int width;
 	private int height;
+	private String colour;
 
 	public int calculateArea() {
 		return width * height;
@@ -10,13 +11,13 @@ public class Rectangle {
 	}
 
 	public void setWidth(int widthPassed) {
-		width = widthPassed;
-		if (width < 1) {
+
+		if (widthPassed < 1) {
 			width = 1;
-		}
-		else
-		if (width > 100) {
+		} else if (widthPassed > 100) {
 			width = 100;
+		} else {
+			width = widthPassed;
 		}
 
 	}
@@ -26,19 +27,31 @@ public class Rectangle {
 	}
 
 	public void setHeight(int heightPassed) {
-		height = heightPassed;
-		if (height < 1) {
+		if (heightPassed < 1) {
 			height = 1;
-		}
-		else
-		if (height > 100) {
+		} else if (heightPassed > 100) {
 			height = 100;
+		} else {
+			height = heightPassed;
 		}
 
 	}
 
 	public int getHeight() {
 		return height;
+	}
+
+	public void setColour(String colourPassed) {
+		colourPassed = colourPassed.toLowerCase();
+		if (!colourPassed.equals("red") && !colourPassed.equals("blue") && !colourPassed.equals("green")) {
+			colour = "red";
+		} else {
+			colour = colourPassed;
+		}
+	}
+
+	public String getColour() {
+		return colour;
 	}
 
 }
