@@ -3,14 +3,14 @@ package com.techlabs.circle;
 public class Circle {
 	private float radius;
 	private String borderStyle;
-	private final float pi=3.14f;
+	private final float PI=3.14f;
 
 	public float calculateArea() {
-		return pi * radius * radius;
+		return PI * radius * radius;
 	}
 
 	public float calculatePerimeter() {
-		return 2f * pi * radius;
+		return 2f * PI * radius;
 	}
 
 	public void setRadius(float radiusPassed) {
@@ -31,7 +31,7 @@ public class Circle {
 		borderPaased = borderPaased.toLowerCase();
 		if (!borderPaased.equals("single") && !borderPaased.equals("double")
 				&& !borderPaased.equals("doted")) {
-			borderStyle = "single line";
+			borderStyle = "single";
 		} else {
 			borderStyle = borderPaased;
 		}

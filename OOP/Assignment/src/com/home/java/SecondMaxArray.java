@@ -16,6 +16,7 @@ public class SecondMaxArray {
 		for (i = 0; i < inputArray.length; i++) {
 			if (max < inputArray[i]) {
 				max = inputArray[i];
+				
 
 			}
 
