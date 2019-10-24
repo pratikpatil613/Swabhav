@@ -14,6 +14,7 @@ public class RectangleColorTest {
 		System.out.println("rect height is:"+r.getheight());
 		System.out.println("rect color is :"+r.getcolor());
 		System.out.println("rect area is:"+r.calculateArea());
+		System.out.println();
 		
 	}
 

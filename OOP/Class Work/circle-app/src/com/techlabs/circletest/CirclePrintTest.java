@@ -15,7 +15,7 @@ public class CirclePrintTest {
 		printInfo(c2);
 	}
 
-	static void printInfo(Circle c) {
+	public static void printInfo(Circle c) {
 		System.out.println("radius is: " + c.getRadius());
 		System.out.println("border is: " + c.getborderStyle());
 		System.out.println("Area is: " + c.calculateArea());

@@ -12,6 +12,11 @@ public class Player {
 
 	}
 
+	public Player(int id, String name) {
+		this(id, name, 18);
+
+	}
+
 	public int getid() {
 		return id;
 	}
@@ -22,6 +27,14 @@ public class Player {
 
 	public int getAge() {
 		return age;
+	}
+
+	public Player whosIsElder(Player p1) {
+		if (this.age < p1.age) {
+			return p1;
+		} else
+			return this;
+
 	}
 
 }
