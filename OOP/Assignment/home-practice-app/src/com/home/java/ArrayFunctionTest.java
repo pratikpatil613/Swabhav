@@ -10,8 +10,8 @@ public class ArrayFunctionTest {
 		int minNo = minOfArray(num);
 		System.out.println(minNo);
 
-		double avgNo = everageOfArray(num);
-		System.out.println(avgNo);
+		int avgNO = everageOfArray(num);
+		System.out.println(avgNO);
 
 	}
 
@@ -39,7 +39,7 @@ public class ArrayFunctionTest {
 		return min;
 	}
 
-	static double everageOfArray(int[] averageInput) {
+	static int everageOfArray(int[] averageInput) {
 		int sum = 0, avg = 0;
 		System.out.println("Average:");
 		for (int i = 0; i < averageInput.length; i++) {

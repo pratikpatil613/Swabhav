@@ -35,10 +35,8 @@ public class Account {
 	public void withdraw(double amount) {
 		double newbalance = balance - amount;
 
-		if (newbalance <500) {
-		} else {
+		if (newbalance < 500) {
+		} else
 			balance = balance - amount;
-		}
 	}
-
 }
