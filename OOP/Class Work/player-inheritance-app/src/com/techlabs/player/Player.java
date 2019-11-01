@@ -5,10 +5,9 @@ public class Player {
 	private String name;
 	private int age;
 	private static int count;
-	
-	
+
 	static int headCount() {
-		
+
 		return count;
 	}
 
@@ -47,6 +46,26 @@ public class Player {
 
 	public int getCount() {
 		return count;
+	}
+
+	@Override
+	public String toString() {
+		String parent = super.toString();
+		String format = "id is:" + this.id + " name is:" + this.name + " age is:" + this.age + " Parent value:"
+				+ parent;
+
+		return format;
+
+	}
+
+	@Override
+	public boolean equals(Object second) {
+		Player secondPlayer = (Player) second;
+		if (secondPlayer.id == this.id) {
+			return true;
+		}
+		return false;
+
 	}
 
 }

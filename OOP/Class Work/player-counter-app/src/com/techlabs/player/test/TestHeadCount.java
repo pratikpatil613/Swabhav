@@ -9,6 +9,6 @@ public class TestHeadCount {
 		Player p2 = new Player(2, "aniket", 22);
 		Player p3 = new Player(3, "Akash", 23);
 
-		System.out.println(p1.getCount());
+		System.out.println(Player.headCount());
 	}
 }
