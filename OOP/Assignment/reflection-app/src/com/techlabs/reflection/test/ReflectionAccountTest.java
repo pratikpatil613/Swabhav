@@ -18,15 +18,15 @@ public class ReflectionAccountTest {
 		}
 		System.out.println("no of constructor:" + noOfCon);
 
-		Method[] methods = cls.getMethods();
+		Method[] methods = cls.getDeclaredMethods();
 		int noOfMethods = 0;
 		for (int m = 0; m < methods.length; m++) {
-			// System.out.println(methods[m].getName());
+	//		 System.out.println(methods[m].getName());
 			noOfMethods++;
 		}
 		System.out.println("no of methods:" + noOfMethods);
 
-		Method[] setters = cls.getDeclaredMethods();
+		Method[] setters = cls.getMethods();
 		int NoOfSetters = 0;
 		for (int s = 0; s < setters.length; s++) {
 			String settersName = setters[s].getName();
