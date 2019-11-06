@@ -4,7 +4,7 @@ import com.techlabs.constructor.case2.Child;
 
 public class Main {
 	public static void main(String[] args) {
-		Child c1 = new Child(200);
+		Child c1 = new Child(500);
 		Child c2 = new Child(300);
 
 		printFoo(c1);

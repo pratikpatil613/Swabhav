@@ -7,6 +7,10 @@ public abstract class Structure {
 	protected int num3;
 
 	public abstract void calculate();
+	
+	public Structure() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public void addition() {
 		num3 = num1 + num2;
