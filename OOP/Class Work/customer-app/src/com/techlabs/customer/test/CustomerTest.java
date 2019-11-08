@@ -8,7 +8,6 @@ public class CustomerTest {
 		Customer c2 = new Customer("Akash", true);
 		Customer c3 = new Customer("sunny", false);
 		c3.
-		
 
 		printInfo(c1);
 		printInfo(c2);
@@ -20,8 +19,8 @@ public class CustomerTest {
 
 	public static void printInfo(Customer c) {
 		System.out.println("id:" + c.getId());
-		System.out.println("name:"+c.getName());
-		System.out.println("active:"+c.getActive());
+		System.out.println("name:" + c.getName());
+		System.out.println("active:" + c.getActive());
 		System.out.println();
 	}
 
