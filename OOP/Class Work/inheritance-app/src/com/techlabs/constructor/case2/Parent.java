@@ -4,7 +4,7 @@ public class Parent {
 	private int foo;
 
 	public Parent(int foo) {
-		// TODO Auto-generated constructor stub
+
 		this.foo = foo;
 	}
 
