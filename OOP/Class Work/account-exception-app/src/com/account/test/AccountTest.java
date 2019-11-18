@@ -7,7 +7,8 @@ public class AccountTest {
 	public static void main(String[] args) throws Exception {
 
 		// case1();
-		case2();
+		// case2();
+		case3();
 	}
 
 	private static void case1() throws Exception {
@@ -37,7 +38,7 @@ public class AccountTest {
 		InsufficientFundException i = new InsufficientFundException(101, "abc", 500);
 		try {
 			acc.withdraw(100);
-		} catch (Exception ex) {
+		} catch (InsufficientFundException ex) {
 			System.out.println(ex.getMessage());
 		}
 
