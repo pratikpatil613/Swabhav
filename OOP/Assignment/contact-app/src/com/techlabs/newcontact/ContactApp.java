@@ -69,9 +69,10 @@ public class ContactApp {
 						}
 
 						for (Contact c : contacts1) {
-							System.out.println(c.getName());
-							System.out.println(c.getContactNO());
-							System.out.println(c.getEmailId());
+							Contact con = (Contact) c;
+							System.out.println(con.getName());
+							System.out.println(con.getContactNO());
+							System.out.println(con.getEmailId());
 
 						}
 
