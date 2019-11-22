@@ -1,8 +1,10 @@
-package com.techlabs.student;
+package com.techlabs.hashsettest;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
+
+import com.techlabs.student.Student;
 
 public class TreeSetTest {
 	public static void main(String[] args) {

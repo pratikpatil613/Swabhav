@@ -1,8 +1,6 @@
-package com.techlabs.hashsettest;
+package com.techlabs.student;
 
 import java.util.Comparator;
-
-import com.techlabs.student.Student;
 
 public class SortName implements Comparator<Student> {
 	@Override
