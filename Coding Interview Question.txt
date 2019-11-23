@@ -1,0 +1,39 @@
+1.find largest number in an array
+int []numbers={10,20,50,40};
+
+
+2.find second largest number in an array
+int []numbers={10,20,50,40};
+
+3.traverse first number to last in an array
+for example {10,20,30,40}
+after traversing {20,30,40,10}
+
+4.print foolowing pattern
+a)*            b)   *
+  **               * *
+  ***            *  *  *
+  *****         *  *  *  *
+  ******       *  *  *  * *
+
+5.reversr given number
+for eg 5321 ->1235
+
+
+6.count number of vowel in a String :"abcdefa"
+
+7.find number of occurances of character 'a'in a String 
+
+8.find index of 'a' in a String:"abcdefa"
+
+9.arrange array according to group
+for eg. array={red,green,red,red,green}convert it into{red,red,red,green,green}
+
+10.check paranthesis in String 
+for eg.String ="{[()]}" it returns true else if "{[())} returns false
+
+11.count number from array and disply 
+for eg for eg {10,10,10,20,20,20}
+it will first disply count of 10 and then disply count of 20
+10->3
+20->3
