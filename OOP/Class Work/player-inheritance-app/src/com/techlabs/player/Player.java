@@ -6,11 +6,6 @@ public class Player {
 	private int age;
 	private static int count;
 
-	static int headCount() {
-
-		return count;
-	}
-
 	public Player(int id, String name, int age) {
 		this.id = id;
 		this.name = name;

@@ -20,8 +20,9 @@ public class Manager extends Employee {
 
 	}
 
+	@Override
 	public String getAllowanceDetails() {
-		String OtherElement="\nhara:"+this.hra+"\nta:"+this.ta+"\nda:"+this.da;
+		String OtherElement = "\nhara:" + this.hra + "\nta:" + this.ta + "\nda:" + this.da;
 		return OtherElement;
 	}
 
