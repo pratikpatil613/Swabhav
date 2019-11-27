@@ -35,5 +35,4 @@ public class Preson {
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
-
 }

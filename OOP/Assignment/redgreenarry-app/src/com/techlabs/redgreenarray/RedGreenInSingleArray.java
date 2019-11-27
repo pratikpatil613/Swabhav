@@ -2,8 +2,7 @@ package com.techlabs.redgreenarray;
 
 public class RedGreenInSingleArray {
 	public static void main(String[] args) {
-		String[] colors = { "red", "green", "red", "green", "red", "red", "green"
-				, "red", "red", "green" };
+		String[] colors = { "red", "green", "red", "green", "red", "red", "green", "red", "red", "green", "red" };
 
 		FilterArray(colors);
 		for (String c : colors) {

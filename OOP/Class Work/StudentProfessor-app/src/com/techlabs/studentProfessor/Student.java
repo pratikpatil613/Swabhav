@@ -1,15 +1,14 @@
 package com.techlabs.studentProfessor;
 
 public class Student extends Preson {
+	Branch branch;
 
-	private String branch;
-
-	public Student(int id, String address, String dob, String branch) {
+	public Student(int id, String address, String dob, Branch branch) {
 		super(id, address, dob);
 		this.branch = branch;
 	}
 
-	public String getBrach() {
+	public Branch getBrach() {
 		return branch;
 	}
 

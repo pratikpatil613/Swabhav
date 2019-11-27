@@ -1,0 +1,6 @@
+package com.techlabs.studentProfessor;
+
+public enum Branch {
+	COMPUTER, ELECTRICLE, INFORMATION_TECHNOLOGY, ELECTRONICS_AND_TELECOMMUNICATION, CIVIL
+
+}
