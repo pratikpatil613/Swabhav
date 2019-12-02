@@ -13,7 +13,8 @@ public class LineItemTest {
 
 	public static void printInfo(LineItem l) {
 		System.out.println("Line Item id:" + l.getId());
-		System.out.println("Lline Item quantity" + l.getQuantity());
+		System.out.println("Lline Item quantity:" + l.getQuantity());
+		System.out.println("Line Item Cost:" + l.calculateItemCost());
 		System.out.println("product details:" + l.getpProduct());
 
 	}

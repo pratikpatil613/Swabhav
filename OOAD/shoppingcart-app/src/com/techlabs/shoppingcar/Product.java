@@ -6,12 +6,12 @@ public class Product {
 	private double cost;
 	private float discount;
 
-	public Product(int id, String name, double cost, float date) {
+	public Product(int id, String name, double cost, float discount) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.cost = cost;
-		this.discount = date;
+		this.discount = discount;
 	}
 
 	public int getId() {
@@ -53,10 +53,8 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", cost=" + cost + ", discount=" + discount + "]";
+		return "Product [id=" + id + ", name=" + name + ", cost=" + cost + ", "
+				+ "discount=" + discount +" Product Final cost="+calculateFinalCost()+ "]";
 	}
-	
-	
-	
 
 }

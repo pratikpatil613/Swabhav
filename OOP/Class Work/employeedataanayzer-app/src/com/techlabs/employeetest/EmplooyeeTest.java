@@ -1,4 +1,4 @@
-ccpackage com.techlabs.employeetest;
+package com.techlabs.employeetest;
 
 import java.util.*;
 import java.util.stream.Collectors;

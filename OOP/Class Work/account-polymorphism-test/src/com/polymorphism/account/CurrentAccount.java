@@ -4,10 +4,10 @@ public class CurrentAccount extends Account {
 
 	public CurrentAccount(int accno, String name, double balance) {
 		super(accno, name, balance);
-		// TODO Auto-generated constructor stub
 
 	}
 
+	@Override
 	public void withdraw(double amount) {
 		double newBalance = balance - amount;
 		if (newBalance < 500) {

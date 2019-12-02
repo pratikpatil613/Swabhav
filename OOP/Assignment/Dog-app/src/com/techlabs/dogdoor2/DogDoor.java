@@ -1,4 +1,4 @@
-package com.techlabs.dogapp;
+package com.techlabs.dogdoor2;
 
 public class DogDoor {
 	private boolean open;

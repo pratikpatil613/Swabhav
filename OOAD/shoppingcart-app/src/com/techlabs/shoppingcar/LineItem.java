@@ -6,7 +6,6 @@ public class LineItem {
 	private int quantity;
 
 	public LineItem(int id, Product product, int quantity) {
-		super();
 		this.id = id;
 		this.product = product;
 		this.quantity = quantity;
@@ -22,6 +21,18 @@ public class LineItem {
 
 	public Product getpProduct() {
 		return product;
+	}
+
+	public double calculateItemCost() {
+		double itemCost = quantity * product.calculateFinalCost();
+		return itemCost;
+
+	}
+
+	@Override
+	public String toString() {
+		return "LineItemDetails [id=" + id + "\nproductDetails=" + product + ", quantity=" + quantity
+				+ "\nproduc calculateItemCost=" + calculateItemCost() + "]";
 	}
 
 }
