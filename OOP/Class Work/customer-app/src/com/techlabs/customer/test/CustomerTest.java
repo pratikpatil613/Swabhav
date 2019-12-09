@@ -7,7 +7,7 @@ public class CustomerTest {
 		Customer c1 = new Customer("Pratik", true);
 		Customer c2 = new Customer("Akash", true);
 		Customer c3 = new Customer("sunny", false);
-		c3.
+	//	c3.
 
 		printInfo(c1);
 		printInfo(c2);

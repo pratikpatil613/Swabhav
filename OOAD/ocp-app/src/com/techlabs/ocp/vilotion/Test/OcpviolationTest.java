@@ -5,7 +5,7 @@ import com.techlabs.ocp.vilotion.FixedDeposit;
 
 public class OcpviolationTest {
 	public static void main(String[] args) {
-		FixedDeposit fix = new FixedDeposit(101, "xyz", 100000, 10, FestivalType.Normal);
+		FixedDeposit fix = new FixedDeposit(101, "xyz", 100000, 10, FestivalType.Holi);
 
 		printInfo(fix);
 	}

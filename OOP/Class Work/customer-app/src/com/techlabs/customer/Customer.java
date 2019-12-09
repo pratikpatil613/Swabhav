@@ -5,10 +5,10 @@ public class Customer {
 	private int id;
 	private String name;
 	private boolean active;
-	private static int count;
+	private static int count=1000;
 
 	static {
-		count = 1000;
+	//	count = 1000;
 		System.out.println("insite static block");
 	}
 

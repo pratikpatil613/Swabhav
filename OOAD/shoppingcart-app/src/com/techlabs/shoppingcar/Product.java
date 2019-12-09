@@ -52,9 +52,23 @@ public class Product {
 	}
 
 	@Override
+	public int hashCode() {
+		return this.id;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Product anotherProduct = (Product) obj;
+		if (anotherProduct.id == this.id) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", cost=" + cost + ", "
-				+ "discount=" + discount +" Product Final cost="+calculateFinalCost()+ "]";
+		return "Product [id=" + id + ", name=" + name + ", cost=" + cost + ", " + "discount=" + discount
+				+ " Product Final cost=" + calculateFinalCost() + "]";
 	}
 
 }

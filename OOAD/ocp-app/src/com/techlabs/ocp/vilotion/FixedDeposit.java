@@ -15,7 +15,7 @@ public class FixedDeposit {
 		this.duration = duration;
 		this.festivalType = festivalType;
 	}
-
+	
 	public double getRate() {
 		double rate = 0;
 		if (FestivalType.values().equals("Normal")) {
@@ -29,7 +29,7 @@ public class FixedDeposit {
 	}
 
 	public double calcualteSimpleInterest() {
-		double interest = pricipleDeposit * duration * getRate();
+		double interest = pricipleDeposit * duration * getRate()/100;
 		return interest;
 
 	}

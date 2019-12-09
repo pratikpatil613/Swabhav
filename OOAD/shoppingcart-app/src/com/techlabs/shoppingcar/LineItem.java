@@ -22,11 +22,29 @@ public class LineItem {
 	public Product getpProduct() {
 		return product;
 	}
+	
+
+	
 
 	public double calculateItemCost() {
 		double itemCost = quantity * product.calculateFinalCost();
 		return itemCost;
 
+	}
+
+	@Override
+	public int hashCode() {
+		return this.id ;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		LineItem second = (LineItem) obj;
+		if (this.id == second.getId()&&this.product.getId()==second.product.getId()) {
+			this.quantity += second.quantity;
+			return true;
+		}
+		return false;
 	}
 
 	@Override

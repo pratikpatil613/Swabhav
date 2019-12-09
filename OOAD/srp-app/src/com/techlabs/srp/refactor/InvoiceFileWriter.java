@@ -1,9 +1,6 @@
 package com.techlabs.srp.refactor;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class InvoiceFileWriter {
 	Invoice invoice;
@@ -13,14 +10,31 @@ public class InvoiceFileWriter {
 
 	}
 
-	public void write(Invoice i) throws IOException {
-		File fileName = new File("Invoice.txt");
+	File fileName = new File("Invoice.txt");
+
+	public void write() throws IOException {
 		FileWriter writer = new FileWriter(fileName);
 		BufferedWriter bw = new BufferedWriter(writer);
-		writer.write(i.getId() + "\n" + i.getProductName() + "\n" + i.calculateDiscount() + "\n" + i.calculateTax()
-				+ "\n" + i.findCost());
+		writer.write("id:" + invoice.getId() + "\nProduct Name:" + invoice.getProductName() + "\nCalculateDiscount:"
+				+ invoice.calculateDiscount() + "\nclaculateTax" + invoice.calculateTax() + "\nCost:"
+				+ invoice.findCost());
 		writer.close();
 		bw.close();
+
+	}
+
+	public void read() throws IOException {
+		FileReader reader = new FileReader(fileName);
+		BufferedReader br = new BufferedReader(reader);
+		String s;
+		while ((s = br.readLine()) != null)
+
+		{
+			System.out.println(s);
+
+		}
+		reader.close();
+		br.close();
 
 	}
 }

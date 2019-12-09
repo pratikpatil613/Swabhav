@@ -1,7 +1,10 @@
 package com.techlabs.shoppingcar;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+
+import javax.sound.sampled.Line;
 
 public class Order {
 	private int id;
@@ -32,9 +35,23 @@ public class Order {
 	}
 
 	@Override
+	public int hashCode() {
+		return this.id;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		LineItem item = (LineItem) obj;
+		if (this.id == item.getId()) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
 	public String toString() {
-		return "OrderDetails [id=" + id + ", date=" + date + "]" + "\n" + items +
-				"\ncheckOutPrice()=" + checkOutPrice()+ "]";
+		return "OrderDetails [id=" + id + ", date=" + date + "]" + "\n" + items + "\ncheckOutPrice()=" + checkOutPrice()
+				+ "]";
 		// + "\ngetList()=" + getList() + "]";
 	}
 
