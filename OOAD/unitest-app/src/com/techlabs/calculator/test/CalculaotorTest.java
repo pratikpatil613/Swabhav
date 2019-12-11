@@ -32,7 +32,7 @@ public class CalculaotorTest {
 		int expectedResult = 50;
 		try {
 			// Ant
-			int actualResult = cal.add(-30, 20);
+			int actualResult = cal.add(30, -20);
 		} catch (Exception e) {
 			exp = true;
 		}
