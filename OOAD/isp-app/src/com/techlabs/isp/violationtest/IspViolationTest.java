@@ -10,7 +10,11 @@ public class IspViolationTest {
 		Developer d = new Developer();
 
 		printInfo(m);
-		printInfo(d);
+		try {
+			printInfo(d);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 
 	}
 

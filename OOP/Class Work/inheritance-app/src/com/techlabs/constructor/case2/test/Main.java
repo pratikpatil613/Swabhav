@@ -1,6 +1,7 @@
 package com.techlabs.constructor.case2.test;
 
 import com.techlabs.constructor.case2.Child;
+import com.techlabs.constructor.case2.Parent;
 
 public class Main {
 	public static void main(String[] args) {

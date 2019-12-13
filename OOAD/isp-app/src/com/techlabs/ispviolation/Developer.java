@@ -1,5 +1,7 @@
 package com.techlabs.ispviolation;
 
+import javax.management.RuntimeErrorException;
+
 public class Developer implements IWork {
 
 	@Override
@@ -16,11 +18,13 @@ public class Developer implements IWork {
 
 	@Override
 	public void startEat() {
+		throw new RuntimeException("violating isp");
 
 	}
 
 	@Override
 	public void stopEat() {
+		throw new RuntimeException("violating isp");
 
 	}
 
