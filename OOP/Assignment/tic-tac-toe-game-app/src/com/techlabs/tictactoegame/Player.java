@@ -13,8 +13,6 @@ public class Player {
 		do {
 			System.out.println("player: plese select number to enter your choice");
 			String choice = userInput.nextLine();
-//		System.out.println("enter your sign");
-//		String sign = userInput.nextLine();
 
 			for (int i = 0; i < 3; i++) {
 				for (int j = 0; j < 3; j++) {
@@ -41,8 +39,7 @@ public class Player {
 		if (winner.equalsIgnoreCase("draw")) {
 			System.out.println("It's a draw! Thanks for playing.");
 		} else {
-			System.out.println("Congratulations! "+winner+"'s "
-					+ "have won! Thanks for playing.");
+			System.out.println("Congratulations! " + winner + "'s " + "have won! Thanks for playing.");
 		}
 
 	}

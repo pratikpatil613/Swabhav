@@ -1,12 +1,11 @@
-package com.techlabs.tictactoegame;
+package com.techlabs.tictactoe.main;
 
 import java.util.Scanner;
 
+import com.techlabs.tictactoegame.Player;
+
 public class TicTacToe {
 	public static void main(String[] args) {
-
-		int winner = 0;
-		Scanner userInput = new Scanner(System.in);
 
 		String[][] gameBoard = new String[3][3];
 		int z = 1;

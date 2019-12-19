@@ -15,47 +15,68 @@ import java.util.TreeSet;
 public class DataAnalyzer {
 
 	Parser parser;
-
-	Set<Employee> empSet;
-	Set<Employee> empSet2;
-
 	Map<Integer, Integer> employeesDepMap = new TreeMap<Integer, Integer>();
-	Map<Integer, Integer> employeesDesMap = new TreeMap<Integer, Integer>();
-
-	private Map<Integer, ArrayList<Employee>> employeesMap = new TreeMap<Integer, ArrayList<Employee>>();
+	Map<String, Integer> employeesDesMap = new TreeMap<String, Integer>();
 
 	public DataAnalyzer(Parser parser) {
 		this.parser = parser;
-		empSet = new TreeSet<Employee>();
-
 	}
 
-	public void departmentWise() {
-		empSet = parser.Parse();
-		int count = 0;
+	public Map<Integer, Integer> getDepartmentWise() {
+		System.out.println("department wise");
+		Set<Employee> empSet = parser.Parse();
+		int count = 1;
 		for (Employee e : empSet) {
-			if (!(employeesDepMap.containsKey(e.getDepartment()))) {
-				count = 1;
+			if (employeesDepMap.containsKey(e.getDepartment())) {
+				employeesDepMap.put(e.getDepartment(), employeesDepMap.get(e.getDepartment()) + 1);
+			} else {
 				employeesDepMap.put(e.getDepartment(), count);
-			} else if (employeesDepMap.containsKey(e.getDepartment())) {
-				count++;
-				employeesDepMap.put(e.getDepartment(), count);
-
 			}
-
 		}
-
-		for (Entry<Integer, Integer> empmap : employeesDepMap.entrySet()) {
-			System.out.println("department no:=" + empmap.getKey() + "value=" + empmap.getValue());
-		}
+		return employeesDepMap;
 	}
 
-	/*
-	 * public void designationWise() { empSet2=parser.Parse(); int count=1;
-	 * for(Employee e:empSet2) {
-	 * 
-	 * if(!employeesDesMap.containsKey(e.getEmployeeDesignation())) {
-	 * employeesDesMap.put } } }
-	 */
+	public Map<String, Integer> designationWise() {
+		System.out.println("designation wise");
+		Set<Employee> empSet2 = parser.Parse();
+		int count = 1;
+		for (Employee e : empSet2) {
+			if (employeesDesMap.containsKey(e.getEmployeeDesignation())) {
+				employeesDesMap.put(e.getEmployeeDesignation(), employeesDesMap.get(e.getEmployeeDesignation()) + 1);
+			} else {
+				employeesDesMap.put(e.getEmployeeDesignation(), count);
+			}
+		}
+		return employeesDesMap;
+	}
 
+	public Map<Integer, Employee> maxSalEmp() {
+
+		System.out.println("maxSalEmp");
+		Set<Employee> empSet3 = parser.Parse();
+		Map<Integer, Employee> MaxSalEmployee = new TreeMap<Integer, Employee>();
+
+		Employee maxSalemp = null;
+		for (Employee e : empSet3) {
+			if (maxSalemp == null || maxSalemp.getSalary() < e.getSalary()) {
+				maxSalemp = e;
+			}
+		}
+		MaxSalEmployee.put(maxSalemp.getDepartment(), maxSalemp);
+		return MaxSalEmployee;
+	}
+
+	public Map<String, Integer> noOfEmployeeDesignationWise(String designarion) {
+		System.out.println("Single DesignationWise Emp");
+		int count = 1;
+		Map<String, Integer> desWise = new TreeMap<String, Integer>();
+		Set<Employee> empSet4 = parser.Parse();
+		boolean b = false;
+		for (Employee e : empSet4) {
+			if ((e.getEmployeeDesignation().equalsIgnoreCase(designarion))) {
+				desWise.put(e.getEmployeeDesignation(), count++);
+			}
+		}
+		return desWise;
+	}
 }

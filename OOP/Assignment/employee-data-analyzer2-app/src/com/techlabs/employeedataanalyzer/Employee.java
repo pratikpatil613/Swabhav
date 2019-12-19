@@ -2,7 +2,8 @@ package com.techlabs.employeedataanalyzer;
 
 import java.util.Set;
 
-public class Employee implements Comparable<Employee> {
+public class Employee {
+
 	private int employeeId;
 	private String employeeName;
 	private String employeeDesignation;
@@ -12,8 +13,11 @@ public class Employee implements Comparable<Employee> {
 	private String commision;
 	private int department;
 
-	public Employee(int employeeId, String employeeName, String employeeDesignation, String managerId,
-			String dateOfJoinings, double salary, String commision, int department) {
+	public Employee(int employeeId, String employeeName,
+			String employeeDesignation, String managerId,
+			String dateOfJoinings, double salary, 
+			String commision, int department) {
+	
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 		this.employeeDesignation = employeeDesignation;
@@ -59,20 +63,14 @@ public class Employee implements Comparable<Employee> {
 
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeDesignation="
-				+ employeeDesignation + ", managerId=" + managerId + ", dateOFJoining=" + dateOFJoining + ", salary="
-				+ salary + ", commision=" + commision + ", department=" + department + "]\n";
-	}
-
-	@Override
-	public int compareTo(Employee o) {
-		if (o.employeeId == this.employeeId && o.department == this.department) {
-			return 0;
-		} else if (o.employeeId < this.employeeId && (o.department < this.department)) {
-
-			return -1;
-		}
-		return 1;
+		return "Employee [employeeId=" + employeeId + 
+				", employeeName=" + employeeName +
+				", employeeDesignation="+ employeeDesignation + 
+				", managerId=" + managerId +
+				", dateOFJoining=" + dateOFJoining +
+				", salary="+ salary +
+				", commision=" + commision +
+				", department=" + department + "]\n";
 	}
 
 }

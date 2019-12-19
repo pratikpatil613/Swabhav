@@ -68,14 +68,14 @@ public class Winner {
 
 		// List<String[]> list = Arrays.asList(gameBoard);
 		// int i = 0;
-		int p = 0;
+		int p = 1;
 
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 
-				if (Arrays.asList(gameBoard[i][j]).contains(String.valueOf(p + 1))) {
+				if (Arrays.asList(gameBoard[i][j]).contains(String.valueOf(p))) {
 					break;
-				} else if (p == 8) {
+				} else if (p == 9) {
 					return "draw";
 				}
 				p++;
