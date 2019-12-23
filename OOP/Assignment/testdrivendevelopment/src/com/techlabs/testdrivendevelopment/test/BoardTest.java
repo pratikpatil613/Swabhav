@@ -1,10 +1,12 @@
 package com.techlabs.testdrivendevelopment.test;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.techlabs.testdrivendevelopment.Board;
@@ -15,38 +17,51 @@ public class BoardTest {
 
 	@Test
 	public void checkBoardIsEmpty() {
-		List<Cell> cellList = new ArrayList<Cell>(9);
-		Board board = new Board();
-		MarkType extectedMark = MarkType.EMPTY;
-		cellList.add(new Cell(MarkType.EMPTY));
-		cellList.add(new Cell(MarkType.EMPTY));
-		board.setCellList(cellList);
+		Board board = new Board(3, 3);
 
-		MarkType actualMark = board.getCellList().get(0).getMark();
-		MarkType actualMark1 = board.getCellList().get(1).getMark();
-//		Cell actualMark2 = board.getCellList().get(2);
+		// MarkType extectedMark=MarkType.EMPTY;
+		// board.setMarkBoard(extectedMark);
+		Cell[][] returnBoard = new Cell[3][3];
+		board.setGameBoard(3, 3);
+		Cell[][] expectedBoard = returnBoard;
+		Cell[][] actualBoard = board.getGameBoard();
 
-		assertEquals(extectedMark, actualMark);
+		assertEquals(actualBoard, actualBoard);
+		// board.printBoard();
 
 	}
 
 	@Test
-	void checkBoardIsFull() {
-		List<Cell> cellList = new ArrayList<Cell>();
-		Board board = new Board();
-		MarkType expectedMark = MarkType.o;
-		MarkType expectedMark1 = MarkType.X;
+	public void BoardIsFull() {
+		Board board = new Board(3, 3);
+		boolean expextedIsEmpty = true;
 
-		cellList.add(new Cell(MarkType.o));
-		cellList.add(new Cell(MarkType.X));
+		board.setMarkCell(0, 0, new Cell(MarkType.X));
+		board.setMarkCell(0, 1, new Cell(MarkType.O));
+		board.setMarkCell(0, 2, new Cell(MarkType.X));
+		board.setMarkCell(1, 0, new Cell(MarkType.O));
+		board.setMarkCell(1, 1, new Cell(MarkType.EMPTY));
+		board.setMarkCell(1, 2, new Cell(MarkType.O));
+		board.setMarkCell(2, 0, new Cell(MarkType.X));
+		board.setMarkCell(2, 1, new Cell(MarkType.O));
+		board.setMarkCell(2, 2, new Cell(MarkType.X));
 
-		board.setCellList(cellList);
-		MarkType actualMark = board.getCellList().get(0).getMark();
-		MarkType actualMark1 = board.getCellList().get(0).getMark();
+		board.printBoard();
 
-		assertEquals(expectedMark, actualMark);
-		assertEquals(expectedMark1, actualMark1);
-
+		boolean expextedIsEmpty1 = board.isBoardEmpty();
+		expextedIsEmpty = expextedIsEmpty1;
+		assertTrue(expextedIsEmpty);
 	}
+
+	@Test
+	public void getMarkCell() {
+		Board board = new Board(3, 3);
+		MarkType expeMarkType = MarkType.EMPTY;
+		board.setMarkCell(2, 0,new Cell(MarkType.EMPTY));
+		MarkType actualMarkType = board.getMarkCell(2,0).getMark();
+
+		Assert.assertEquals(expeMarkType, actualMarkType);
+	}
+	
 
 }
