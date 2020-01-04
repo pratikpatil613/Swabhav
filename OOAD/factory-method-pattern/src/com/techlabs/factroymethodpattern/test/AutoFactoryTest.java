@@ -1,4 +1,4 @@
-package com.techlabs.factorymethodpattern.test;
+package com.techlabs.factroymethodpattern.test;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,19 +28,7 @@ public class AutoFactoryTest {
 		auto.start();
 		auto.stop();
 
-		codeFromPropertyFile();
 	}
 
-	public static void codeFromPropertyFile() throws IOException {
-		Properties prop = new Properties();
-		File fileName = new File("CarFactory.properties");
-
-		// OutputStream out = new FileOutputStream(fileName);
-		InputStream in = new FileInputStream(fileName);
-		prop.load(in);
-
-		System.out.println(prop.getProperty("factory"));
-
-	}
-
+	
 }

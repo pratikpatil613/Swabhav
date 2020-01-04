@@ -2,9 +2,6 @@ package com.techlabs.factorymethodpattern.case3;
 
 public class BMW implements IAutomobile, IAutomobileFactory {
 
-	public BMW() {
-	}
-
 	@Override
 	public void start() {
 		System.out.println("BMW Start");
