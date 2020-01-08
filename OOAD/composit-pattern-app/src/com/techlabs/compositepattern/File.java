@@ -12,9 +12,15 @@ public class File implements IStorable {
 		this.size = size;
 	}
 
+	public String getName() {
+		return name;
+	}
+
 	@Override
 	public void display(int dept) {
-		System.out.println(name + extension +"."+size);
+		for(int i=0;i<=dept;i++)
+			System.out.print("_");
+		System.out.println(name + extension + "." + size);
 	}
 
 }

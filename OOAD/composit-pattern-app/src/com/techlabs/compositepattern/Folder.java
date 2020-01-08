@@ -23,16 +23,30 @@ public class Folder implements IStorable {
 	@Override
 	public void display(int dept) {
 		System.out.println(name);
-		for (IStorable s : childrens) {
-			if (dept != 0) {
-				System.out.print(" ");
-				s.display(dept);
+		for (IStorable f : childrens) {
 
-			} else if (dept == 0) {
-				s.display(dept);
+		//	for (int i = 0; i <= 0; i++) {
+				for (int j = 0; j <= dept; j++) {
+					System.out.print("_ ");
+		//		}
+				// for (int k = 0; k <= i; k++) {
+				// System.out.print("* ");
+			//	if (f.getClass().getSimpleName().equals("File")) {
+					// System.out.print(" ");
+			//		f.display(dept);
 
-			}
-			dept++;
+			//	}
+
+				// }
+			//	if (f.getClass().getSimpleName().equals("Folder")) {
+
+			//		dept++;
+					f.display(dept);
+
+				}
+
+		//	}
+			// System.out.println("");
 		}
 
 	}
