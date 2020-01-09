@@ -1,4 +1,4 @@
-ppackage com.techlabs.iterator;
+package com.techlabs.iterator;
 
 import java.util.*;
 
