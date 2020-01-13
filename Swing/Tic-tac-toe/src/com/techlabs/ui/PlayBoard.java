@@ -55,14 +55,14 @@ public class PlayBoard extends JFrame {
 					buttonArray.add(buttons[i][j]);
 					String bText = buttons[i][j].getText();
 					Integer innerI = new Integer(i);
-					final Integer innerJ = new Integer(j);
+					Integer innerJ = new Integer(j);
 					buttons[i][j].addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent e) {
 							System.out.println(bText);
 							if (!analyzer.analyzeResult().name().equals("win"))
 								try {
-									//buttons[innerI][innerJ].setText(game.getCurrentPlayer().getMarkType().name());
+									// buttons[innerI][innerJ].setText(game.getCurrentPlayer().getMarkType().name());
 									game.Play(innerI, innerJ);
 									buttons[innerI][innerJ].setText(board.getCell(innerI, innerJ).getMark().name());
 									currentPlayerTxtField.setText(game.getCurrentPlayer().getName());
@@ -70,7 +70,7 @@ public class PlayBoard extends JFrame {
 
 								} catch (Exception e1) {
 									JOptionPane.showMessageDialog(null, e1.getMessage());
-								}
+							}
 						}
 
 					});
