@@ -13,13 +13,12 @@ public class FileLoader implements ILoader {
 		List<Employee> employees = new ArrayList<Employee>();
 
 		try {
-			BufferedReader br = new BufferedReader(
-					new FileReader("C:\\Users\\kal\\Downloads\\Swabhav REpository\\"
-							+ "OOP\\Assignment\\employee-data-analyzer2-app\\src\\"
-							+ "com\\techlabs\\employeedataanalyzer\\dataFile.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\kal\\Downloads\\Swabhav REpository\\"
+					+ "OOP\\Assignment\\employee-data-analyzer2-app\\src\\"
+					+ "com\\techlabs\\employeedataanalyzer\\dataFile.txt"));
 
 			String line;
-			String newLine = "";
+			String newLine = " ";
 
 			while ((line = br.readLine()) != null) {
 				String[] employee = line.split("'");
@@ -38,8 +37,7 @@ public class FileLoader implements ILoader {
 				String commision = employeeData[6];
 				int department = Integer.parseInt(employeeData[7]);
 
-				Employee emp = new Employee(employeeId, employeeName,
-						employeeDesignation, managerId, dateOfJoining,
+				Employee emp = new Employee(employeeId, employeeName, employeeDesignation, managerId, dateOfJoining,
 						salary, commision, department);
 				employees.add(emp);
 
