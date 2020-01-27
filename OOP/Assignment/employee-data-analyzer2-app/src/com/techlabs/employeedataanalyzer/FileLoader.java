@@ -18,17 +18,18 @@ public class FileLoader implements ILoader {
 					+ "com\\techlabs\\employeedataanalyzer\\dataFile.txt"));
 
 			String line;
-			String newLine = " ";
+			String newLine = "";
 
 			while ((line = br.readLine()) != null) {
 				String[] employee = line.split("'");
 				for (int i = 0; i < employee.length; i++) {
-					newLine += employee[i];
-				}
+					newLine = newLine + employee[i];
 
+				}
 				String[] employeeData = newLine.split(",");
 
 				int employeeId = Integer.parseInt(employeeData[0]);
+
 				String employeeName = employeeData[1];
 				String employeeDesignation = employeeData[2];
 				String managerId = employeeData[3];
@@ -44,7 +45,8 @@ public class FileLoader implements ILoader {
 				newLine = "";
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		return employees;
 

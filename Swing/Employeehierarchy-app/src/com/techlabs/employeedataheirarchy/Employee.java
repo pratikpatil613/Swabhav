@@ -1,6 +1,11 @@
 package com.techlabs.employeedataheirarchy;
 
-public class Employee {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Employee implements IEmployee, Comparable<Employee> {
 	private int empNo;
 	private String empName;
 	private String job;
@@ -9,6 +14,10 @@ public class Employee {
 	private double salary;
 	private String commission;
 	private int deptNo;
+	private Set<IEmployee> employees = new TreeSet<IEmployee>();
+
+	public Employee() {
+	}
 
 	public Employee(int empNo, String empName, String job, String managerId2, String hireDate, double salary,
 			String commission, int deptNo) {
@@ -87,10 +96,45 @@ public class Employee {
 	}
 
 	@Override
+	public void add(IEmployee employee) {
+		employees.add(employee);
+
+	}
+
+	@Override
+	public int hashCode() {
+		return this.empNo;
+	}
+
+	@Override
 	public String toString() {
 		return "Employee [empNo=" + empNo + ", empName=" + empName + ", job=" + job + ", managerId=" + managerId
 				+ ", hireDate=" + hireDate + ", salary=" + salary + ", commission=" + commission + ", deptNo=" + deptNo
 				+ "]";
+	}
+
+	@Override
+	public int compareTo(Employee e) {
+		if (this.empNo == e.empNo)
+			return 0;
+		return 1;
+	}
+
+	@Override
+	public void display() {
+		int j = 3;
+		System.out.println(empName+empNo);
+		for (IEmployee e : employees) {
+		if(this.job.equalsIgnoreCase("'Manager'"))
+			System.out.print("-------------");
+		else {
+			System.out.print("------- ");
+		}
+			for (int i = 0; i <= j; i++)
+				System.out.print("-");
+			e.display();
+
+		}
 	}
 
 }

@@ -15,7 +15,7 @@ public class MainTest {
 		printEmpoyeeInfo(dan.getDepartmentWise());
 		printEmpoyeeInfo(dan.designationWise());
 		printEmpoyeeInfo(dan.maxSalEmp());
-	//	printEmpoyeeInfo(dan.noOfEmployeeDesignationWise("salesman"));
+		printEmpoyeeInfo(dan.noOfEmployeeDesignationWise("salesman"));
 
 
 	}
